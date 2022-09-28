@@ -8,7 +8,7 @@ require_relative 'lib/dto/snake'
 
 
 get '/' do
-    App.settings
+    App.settings.to_json
 end
 
 post '/start' do

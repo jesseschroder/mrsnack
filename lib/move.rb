@@ -9,16 +9,12 @@ class Move
   end
 
   def execute
-    valid_moves = potential_moves.select { |move| move_valid?(x: move.x, y: move.y) }
+    # No point in ranking if there's one or less options available
+    return no_moves if valid_moves.empty?
+    return direction(valid_moves.first) if valid_moves.count == 1
 
-    if valid_moves.empty?
-      puts "--------------------NO VALID MOVES------------------------"
-      return 'up'
-    end
-
-    direction = direction(valid_moves.first)
-    puts direction
-    direction
+    move = rank_movement_options
+    direction(move)
   end
 
   private
@@ -34,7 +30,12 @@ class Move
     true
   end
 
-  def potential_moves
+  def rank_movement_options
+    # for now just move randomly
+    valid_moves.sample
+  end
+
+  def base_moves
     [
       DTO::Location.new({ 'x' => @me.head.x - 1, 'y' => @me.head.y }),
       DTO::Location.new({ 'x' => @me.head.x + 1, 'y' => @me.head.y }),
@@ -43,8 +44,14 @@ class Move
     ]
   end
 
+  def valid_moves
+    # There are 4 possible moves (up, down, left right)
+    # Filter out any that are not valid (outside board, into another snake)
+    @valid_moves ||= base_moves.select { |move| move_valid?(x: move.x, y: move.y) }
+  end
+
   def snake_bods
-    @board.snakes.flat_map(&:body)
+    @snake_bods ||= @board.snakes.flat_map(&:body)
   end
 
   def snake_collision?(x, y)
@@ -63,5 +70,10 @@ class Move
     else
       return x_movement.positive? ? "left" : "right"
     end
+  end
+
+  def no_moves
+    puts "--------------------NO VALID MOVES------------------------"
+    'up'
   end
 end

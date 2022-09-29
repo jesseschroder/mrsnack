@@ -3,8 +3,8 @@ module DTO
     attr_reader :height, :width, :food, :hazards, :snakes
 
     def initialize(board_request_data)
-      @height = board_request_data['height']
-      @width = board_request_data['width']
+      @height = board_request_data['height'].to_i
+      @width = board_request_data['width'].to_i
       @food = build_locations(board_request_data['food'])
       @hazards = build_locations(board_request_data['hazards'])
       @snakes = build_snakes(board_request_data['snakes'])
@@ -13,7 +13,7 @@ module DTO
     private
 
     def build_snakes(snakes_request_data)
-      snakes_request_data.map { |snake| }
+      snakes_request_data.map { |snake| DTO::Snake.new(snake) }
     end
 
     def build_locations(locations_data)

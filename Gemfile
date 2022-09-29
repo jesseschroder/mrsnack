@@ -7,3 +7,4 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gem 'sinatra'
 gem 'puma'
 gem "ruby-lsp", "~> 0.0.4", :group => :development
+gem 'pry', :group => :development

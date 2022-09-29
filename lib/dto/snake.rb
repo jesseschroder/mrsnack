@@ -9,8 +9,8 @@ module DTO
       @body = build_locations(snake_request_data['body'])
       @latency = snake_request_data['latency']
       @head = build_location(snake_request_data['head'])
-      @length = snake_request_data['length']
-      @shout = snake_request_data['shout']
+      @length = snake_request_data['length'].to_i
+      @shout = snake_request_data['shout'].to_i
       @squad = snake_request_data['squad']
       @customizations = snake_request_data['customizations']
     end

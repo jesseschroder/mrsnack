@@ -1,0 +1,174 @@
+{
+  "game": {
+    "id": "20400cbf-167a-4889-8b31-893b8cd420ab",
+    "ruleset": {
+      "name": "standard",
+      "version": "v1.1.20",
+      "settings": {
+        "foodSpawnChance": 15,
+        "minimumFood": 1,
+        "hazardDamagePerTurn": 14,
+        "hazardMap": "",
+        "hazardMapAuthor": "",
+        "royale": {
+          "shrinkEveryNTurns": 0
+        },
+        "squad": {
+          "allowBodyCollisions": false,
+          "sharedElimination": false,
+          "sharedHealth": false,
+          "sharedLength": false
+        }
+      }
+    },
+    "map": "standard",
+    "timeout": 500,
+    "source": "custom"
+  },
+  "turn": 106,
+  "board": {
+    "height": 11,
+    "width": 11,
+    "snakes": [
+      {
+        "id": "gs_hTJrjKBwbPhVwxRTKq7QGY6V",
+        "name": "mrsnack",
+        "latency": "43",
+        "health": 74,
+        "body": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 0,
+            "y": 1
+          },
+          {
+            "x": 1,
+            "y": 1
+          },
+          {
+            "x": 1,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 0
+          },
+          {
+            "x": 3,
+            "y": 0
+          },
+          {
+            "x": 3,
+            "y": 1
+          },
+          {
+            "x": 2,
+            "y": 1
+          }
+        ],
+        "head": {
+          "x": 0,
+          "y": 0
+        },
+        "length": 8,
+        "shout": "",
+        "squad": "",
+        "customizations": {
+          "color": "#191970",
+          "head": "default",
+          "tail": "default"
+        }
+      }
+    ],
+    "food": [
+      {
+        "x": 5,
+        "y": 6
+      },
+      {
+        "x": 7,
+        "y": 1
+      },
+      {
+        "x": 10,
+        "y": 7
+      },
+      {
+        "x": 9,
+        "y": 0
+      },
+      {
+        "x": 8,
+        "y": 2
+      },
+      {
+        "x": 5,
+        "y": 0
+      },
+      {
+        "x": 7,
+        "y": 7
+      },
+      {
+        "x": 6,
+        "y": 1
+      }
+    ],
+    "hazards": []
+  },
+  "you": {
+    "id": "gs_hTJrjKBwbPhVwxRTKq7QGY6V",
+    "name": "mrsnack",
+    "latency": "43",
+    "health": 74,
+    "body": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 0,
+        "y": 1
+      },
+      {
+        "x": 1,
+        "y": 1
+      },
+      {
+        "x": 1,
+        "y": 0
+      },
+      {
+        "x": 2,
+        "y": 0
+      },
+      {
+        "x": 3,
+        "y": 0
+      },
+      {
+        "x": 3,
+        "y": 1
+      },
+      {
+        "x": 2,
+        "y": 1
+      }
+    ],
+    "head": {
+      "x": 0,
+      "y": 0
+    },
+    "length": 8,
+    "shout": "",
+    "squad": "",
+    "customizations": {
+      "color": "#191970",
+      "head": "default",
+      "tail": "default"
+    }
+  }
+}
